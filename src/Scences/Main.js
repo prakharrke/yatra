@@ -127,7 +127,7 @@ export default class Main extends React.Component {
 		axios.get('https://maps.googleapis.com/maps/api/place/autocomplete/json', {
 			params: {
 
-				key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+				key: 'GOOGLE_API_KEY',
 				input: text,
 				location: `${this.state.region.latitude} , ${this.state.region.longitude}`,
 
@@ -147,7 +147,7 @@ export default class Main extends React.Component {
 		axios.get('https://maps.googleapis.com/maps/api/place/details/json', {
 			params: {
 
-				key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+				key: 'GOOGLE_API_KEY',
 				placeid: placeID,
 
 
@@ -220,7 +220,7 @@ export default class Main extends React.Component {
 
 					axios.get('https://maps.googleapis.com/maps/api/directions/json', {
 						params: {
-							key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+							key: 'GOOGLE_API_KEY',
 							origin: origin,
 							destination: destination,
 							mode: 'driving'
@@ -246,7 +246,7 @@ export default class Main extends React.Component {
 							// Promise to get time and distance
 							axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
 								params: {
-									key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+									key: 'GOOGLE_API_KEY',
 									origins: origin,
 									destinations: destination,
 									mode: 'driving'
@@ -361,7 +361,7 @@ export default class Main extends React.Component {
 
 		axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
 			params: {
-				key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+				key: 'GOOGLE_API_KEY',
 				origins: `${fakeDriverLatitude} , ${longitude}`,
 				destinations: `${latitude} , ${longitude}`,
 				mode: 'driving'
@@ -405,7 +405,7 @@ export default class Main extends React.Component {
 
 		axios.get('https://maps.googleapis.com/maps/api/directions/json', {
 			params: {
-				key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+				key: 'GOOGLE_API_KEY',
 				origin: origin,
 				destination: destination,
 				mode: 'driving'
@@ -450,7 +450,7 @@ export default class Main extends React.Component {
 
 				axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
 					params: {
-						key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+						key: 'GOOGLE_API_KEY',
 						origins: `${driverCurrentLocation.latitude} , ${driverCurrentLocation.longitude}`,
 						destinations: `${this.state.pickUpAddressDetails.location.latitude} , ${this.state.pickUpAddressDetails.location.longitude}`,
 						mode: 'driving'
@@ -595,7 +595,7 @@ export default class Main extends React.Component {
 
 			axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
 				params: {
-					key: 'AIzaSyAFxgebdV7FGWRdWZx3o97TX1Vp_tZGDK4',
+					key: 'GOOGLE_API_KEY',
 					origins: `${driverCurrentLocation.latitude} , ${driverCurrentLocation.longitude}`,
 					destinations: `${this.state.dropAddressDetails.location.latitude} , ${this.state.dropAddressDetails.location.longitude}`,
 					mode: 'driving'
